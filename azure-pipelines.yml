@@ -16,8 +16,8 @@ steps:
       command: "init"
       backendServiceArm: "storage-sc"
       backendAzureRmResourceGroupName: "powershell-grp"
-      backendAzureRmStorageAccountName: "terraformstate201121"
-      backendAzureRmContainerName: "appstore400089891210"
+      backendAzureRmStorageAccountName: "appstore400089891210"
+      backendAzureRmContainerName: "subbu"
       backendAzureRmKey: "terraform.tfstate"
       workingDirectory: '$(System.DefaultWorkingDirectory)/'
 
