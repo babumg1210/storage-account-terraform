@@ -8,7 +8,7 @@ provider "azurerm" {
 }
 
 module "storage_account" {
-  source              = "./storage-account-terraform/storage-account"
+  source              = "./Storage-account"
   storage_account_name = "mystorageaccount1210"
   resource_group_name  = "myResourceGroup1"
   location             = "East US"
