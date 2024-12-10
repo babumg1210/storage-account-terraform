@@ -1,8 +1,8 @@
 terraform {
   backend "azurerm" {
     resource_group_name   = "powershell-grp"
-    storage_account_name  = "terraformstate201121"
-    container_name        = "appstore400089891210"
+    storage_account_name  = "appstore400089891210"
+    container_name        = "subbu"
     key                   = "terraform.tfstate"
     subscription_id       = "ae1b5111-4f4f-477d-b4d4-419fd8cbc789"
     tenant_id             = "c7de2ec6-e7a9-41e7-99e8-e6ff52f3a8d0"
