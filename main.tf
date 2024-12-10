@@ -8,12 +8,12 @@ provider "azurerm" {
 }
 
 module "storage_account" {
-  source              = "./terraform-modules/storage-account"
-  storage_account_name = "mystorageaccount"
-  resource_group_name  = "myResourceGroup"
+  source              = "./storage-account-terraform/storage-account"
+  storage_account_name = "mystorageaccount1210"
+  resource_group_name  = "myResourceGroup1"
   location             = "East US"
   environment          = "dev"
   subnet_id            = "your-subnet-id"
   vnet_id              = "your-vnet-id"
-  vnet_name            = "your-vnet-name"
+  vnet_name            = "storage-vnet"
 }
