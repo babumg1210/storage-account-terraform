@@ -14,24 +14,24 @@ steps:
     inputs:
       provider: "azurerm"
       command: "init"
-      backendServiceArm: "azure-connection"
-      backendAzureRmResourceGroupName: "RG-DC"
+      backendServiceArm: "storage-sc"
+      backendAzureRmResourceGroupName: "powershell-grp"
       backendAzureRmStorageAccountName: "terraformstate201121"
-      backendAzureRmContainerName: "blob-container"
+      backendAzureRmContainerName: "appstore400089891210"
       backendAzureRmKey: "terraform.tfstate"
-      workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/'
 
-  - task: TerraformTaskV4@4
-    inputs:
-      provider: 'azurerm'
-      command: 'plan'
-      environmentServiceNameAzureRM: 'azure-connection'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/'
+  # - task: TerraformTaskV4@4
+  #   inputs:
+  #     provider: 'azurerm'
+  #     command: 'plan'
+  #     environmentServiceNameAzureRM: 'azure-connection'
+  #     workingDirectory: '$(System.DefaultWorkingDirectory)/'
       
-  - task: TerraformTaskV4@4
-    inputs:
-      provider: 'azurerm'
-      command: 'apply'
-      environmentServiceNameAzureRM: 'azure-connection'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/'
+  # - task: TerraformTaskV4@4
+  #   inputs:
+  #     provider: 'azurerm'
+  #     command: 'apply'
+  #     environmentServiceNameAzureRM: 'azure-connection'
+  #     workingDirectory: '$(System.DefaultWorkingDirectory)/'
       
