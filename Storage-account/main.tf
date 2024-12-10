@@ -1,3 +1,11 @@
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "powershell-grp"
+    storage_account_name  = "appstore400089891210"
+    container_name        = "subbu"
+    key                   = "terraform.tfstate"
+  }
+}
 resource "azurerm_storage_account" "storage_account" {
   name                     = var.storage_account_name
   resource_group_name      = var.resource_group_name
