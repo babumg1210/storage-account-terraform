@@ -21,12 +21,12 @@ steps:
       backendAzureRmKey: "terraform.tfstate"
       workingDirectory: '$(System.DefaultWorkingDirectory)/'
 
-  # - task: TerraformTaskV4@4
-  #   inputs:
-  #     provider: 'azurerm'
-  #     command: 'plan'
-  #     environmentServiceNameAzureRM: 'azure-connection'
-  #     workingDirectory: '$(System.DefaultWorkingDirectory)/'
+  - task: TerraformTaskV4@4
+    inputs:
+      provider: 'azurerm'
+      command: 'plan'
+      environmentServiceNameAzureRM: 'storage-sc'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/'
       
   # - task: TerraformTaskV4@4
   #   inputs:
